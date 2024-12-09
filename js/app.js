@@ -77,7 +77,7 @@ function placePiece(index) {
 function checkForWinner() {
   winningCombos.forEach((combo) => {
     const [a, b, c] = combo;
-    if (board[a] === true && board[a] === board[b] && board[a] === board[c]) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       winner = true;
     }
   });
